@@ -1,0 +1,3 @@
+[server]
+headless = true  # Optional, to run the app in headless mode (no browser window)
+pageTitle = "My Awesome Streamlit App"
