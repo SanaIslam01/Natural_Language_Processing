@@ -4,5 +4,4 @@ sklearn
 pickle
 string
 stopwords
-import nltk
 PorterStemmer
