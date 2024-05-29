@@ -26,9 +26,9 @@ else:
     st.write('<h3>Email Spam Classification <span style="color:#EE7214;">(Logistic Regression)</span></h3>', unsafe_allow_html=True)
     st.caption('Empower Your Inbox: Effortlessly Distinguish Spam from Legitimate Emails with our Email Spam Classification Tool')
     # Loading the trained Logistic Regression model
-    model = joblib.load('models/email_model.pkl')
+    model = joblib.load('email_model.pkl')
     # Loading the TF-IDF vectorizer from the file
-    tfidf_vectorizer = joblib.load('models/tfidf_vectorizer.pkl')
+    tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
     # Getting the user input
     input_text = st.text_area("Enter an email text to classify:", max_chars=500)
 
@@ -36,12 +36,12 @@ else:
         if input_text:
             result = classify_email(input_text)
             if result == 1:
-                background = Image.open("assets/alert.png")
+                background = Image.open("alert.png")
                 col1, col2, col3 = st.columns(3)
                 col2.image(background, use_column_width=True, width=10)
                 st.write("Prediction:", "<b style='color:#FC4100;'>Spam Eamil</b>", unsafe_allow_html=True)
             else:
-                background = Image.open("assets/ok.png")
+                background = Image.open("ok.png")
                 col1, col2, col3 = st.columns(3)
                 col2.image(background, use_column_width=True, width=10)
                 st.write("Prediction:", "<b style='color:#65B741;'>None Spam Email</b>", unsafe_allow_html=True)
