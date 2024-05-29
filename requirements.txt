@@ -1,7 +1,0 @@
-streamlit
-nltk
-sklearn
-pickle
-string
-stopwords
-PorterStemmer
