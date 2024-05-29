@@ -1,3 +1,7 @@
-[server]
-headless = true  # Optional, to run the app in headless mode (no browser window)
-pageTitle = "My Awesome Streamlit App"
+# [server]
+# headless = true  # Optional, to run the app in headless mode (no browser window)
+# pageTitle = "My Awesome Streamlit App"
+
+# config.py
+MODEL_PATH = "model.pkl"
+DATA_PATH = "spam.csv"
